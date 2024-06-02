@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 
 public class MinesweeperVisual extends JFrame {
     JTextField widthField, heightFeild, mineFeild;
-    int width, height, mines;
+    String width, height, mines;
     JButton startButton;
     JPanel gamePanel;
     public MinesweeperVisual(){
@@ -41,6 +41,9 @@ public class MinesweeperVisual extends JFrame {
         setVisible(true);
     }
     private void startGame(){
+        width = widthField.getText();
+        height = heightFeild.getText();
+        mines = mineFeild.getText();
         remove(widthField);
         remove(heightFeild);
         remove(mineFeild);
